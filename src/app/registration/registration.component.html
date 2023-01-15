@@ -1,0 +1,62 @@
+
+<html>
+
+    <head>
+        <title>BootStrap Practice</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <section class="h-100 h-custom" style="background-color: orange;">
+            <div class="container py-2 h-80">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="card rounded-5">
+                            <div class="card-body p-4 p-md-5">
+                                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+                                <!-- <form class="px-md-2" onsubmit="return fun()"> -->
+                                <div class="container">
+                                    <div class="col-sm-6" style="margin-left: 50px;">
+                                        <div class="mb-3">
+                                            <label class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" [(ngModel)]="name">
+                                            <span id="name1"></span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="email" [(ngModel)]="email">
+                                            <span id="email1"></span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" [(ngModel)]="password">
+                                            <span id="password1"></span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Mobile Number</label>
+                                            <input type="text" class="form-control" id="mobile" [(ngModel)]="mobile">
+                                            <span id="mobile1"></span>
+                                        </div>
+                                        <div>
+                                            <label class="form-label">Qualification</label>
+                                            <select class="form-select" style="width:250px;" id="degree" [(ngModel)]="degree">
+                                                <option *ngFor="let c of degree">{{c.name}}</option>
+                                            </select>
+                                            <span id="degree1"></span>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mt-2" style="margin-left: 50%;" value="Submit" (click)="Regsubmit()">Submit</button>
+                                    </div>
+                                <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </body>
+    
+    </html>
